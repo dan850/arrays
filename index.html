@@ -9,11 +9,21 @@
 
 <p id="originalArray"></p>
 <br>
+
+<h2>Getting the som of the original array & pushed the sum on the array</h2>
+
+
 <p id="sumArray"></p>
 
+<h2> Multiplying original array by 2</h2>
 
-<p id="demo"></p>
+
+<p id="multAges"></p>
 <br>
+
+<h2> Experimenting with colors</h2>
+
+
 <p style="color:red;" id="originalArray2"></p>
 
 <p style="color:rgb(51, 0, 255);" id="originalArray3"></p>
@@ -22,19 +32,15 @@
 
 <p style="color:rgb(158, 11, 136);" id="originalArray5"></p>
 
-
-
-
 <script>
-const ages = [3, 10, 18, 20];
 
+
+const ages = [3, 10, 18, 20];
 let sum = 0;
 
 for(let i=0; i<ages.length; i++)
 {
-
     sum += ages[i];
-
 }
 
 document.getElementById("sumArray").innerHTML = sum;
@@ -52,14 +58,14 @@ document.getElementById("originalArray4").innerHTML = ages[2];
 document.getElementById("originalArray5").innerHTML = ages[3];
 
 
-document.getElementById("demo").innerHTML = ages.find(checkAge);
+//document.getElementById("demo").innerHTML = ages.find(checkAge);
 
 
 ages.shift();
 
 let showArray = ages;
 
-document.getElementById("demo").innerHTML = ages.find(checkAge);
+//document.getElementById("demo").innerHTML = ages.find(checkAge);
 
 ages.push(23);
 
@@ -88,13 +94,13 @@ function myFunction(value, index, array) {
 }
 
 
-document.getElementById("demo").innerHTML = multAges;
+document.getElementById("multAges").innerHTML = multAges;
 
 
-
+/* //not being used at the moment
 function checkAge(age) {
   return age < 18;
-}
+} */
 </script>
 
 
