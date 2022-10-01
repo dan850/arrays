@@ -11,13 +11,30 @@
 
 <p id="demo"></p>
 <br>
-<p style="color:red;" id="demo2"></p>
+<p style="color:red;" id="originalArray2"></p>
+
+<p style="color:rgb(51, 0, 255);" id="originalArray3"></p>
+
+<p style="color:rgb(9, 113, 40);" id="originalArray4"></p>
+
+<p style="color:rgb(158, 11, 136);" id="originalArray5"></p>
+
+
 
 
 <script>
 const ages = [3, 10, 18, 20];
 
+
 document.getElementById("originalArray").innerHTML = ages;
+
+document.getElementById("originalArray2").innerHTML = ages[0];
+
+document.getElementById("originalArray3").innerHTML = ages[1];
+
+document.getElementById("originalArray4").innerHTML = ages[2];
+
+document.getElementById("originalArray5").innerHTML = ages[3];
 
 
 document.getElementById("demo").innerHTML = ages.find(checkAge);
@@ -28,11 +45,35 @@ ages.shift();
 let showArray = ages;
 
 document.getElementById("demo").innerHTML = ages.find(checkAge);
-document.getElementById("demo2").innerHTML = ages[1];
 
 ages.push(23);
 
 //document.getElementById("demo2").innerHTML = showArray;
+
+
+document.getElementById("originalArray").innerHTML = ages;
+
+document.getElementById("originalArray2").innerHTML = ages[0];
+
+document.getElementById("originalArray3").innerHTML = ages[1];
+
+document.getElementById("originalArray4").innerHTML = ages[2];
+
+document.getElementById("originalArray5").innerHTML = ages[3];
+
+const multAges = ages.map(myFunction);
+
+
+
+
+
+function myFunction(value, index, array) {
+  return value * 2;
+}
+
+
+document.getElementById("demo").innerHTML = multAges;
+
 
 
 function checkAge(age) {
