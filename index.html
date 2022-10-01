@@ -8,6 +8,9 @@
 
 
 <p id="originalArray"></p>
+<br>
+<p id="sumArray"></p>
+
 
 <p id="demo"></p>
 <br>
@@ -24,6 +27,18 @@
 
 <script>
 const ages = [3, 10, 18, 20];
+
+let sum = 0;
+
+for(let i=0; i<ages.length; i++)
+{
+
+    sum += ages[i];
+
+}
+
+document.getElementById("sumArray").innerHTML = sum;
+
 
 
 document.getElementById("originalArray").innerHTML = ages;
@@ -49,6 +64,7 @@ document.getElementById("demo").innerHTML = ages.find(checkAge);
 ages.push(23);
 
 //document.getElementById("demo2").innerHTML = showArray;
+ages.push(sum);
 
 
 document.getElementById("originalArray").innerHTML = ages;
