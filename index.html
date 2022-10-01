@@ -6,6 +6,9 @@
 
 <p></p>
 
+
+<p id="originalArray"></p>
+
 <p id="demo"></p>
 <br>
 <p style="color:red;" id="demo2"></p>
@@ -13,6 +16,9 @@
 
 <script>
 const ages = [3, 10, 18, 20];
+
+document.getElementById("originalArray").innerHTML = ages;
+
 
 document.getElementById("demo").innerHTML = ages.find(checkAge);
 
